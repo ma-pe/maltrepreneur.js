@@ -3,7 +3,7 @@ export class Obj {
 
     static getOwnPropNamesFromObject = (obj) => {
         let propNames = [];
-        doForEveryOwnPropNameInObject(obj, prop => {
+        this.doForEveryOwnPropNameInObject(obj, prop => {
             propNames.push(prop)
         });
         return propNames;
@@ -18,7 +18,7 @@ export class Obj {
     };
 
     static doForEveryOwnPropValueInObject = (obj, cb) => {
-        doForEveryOwnPropNameInObject(obj, (prop) => {
+        this.doForEveryOwnPropNameInObject(obj, (prop) => {
             cb(obj[prop], prop);
         })
     };
@@ -29,6 +29,15 @@ export class Obj {
         else
             obj[attr] = 1;
     };
+
+    static map = (obj, func) => {
+        let mappedObj = {};
+        let cb = (val, prop) => {
+            mappedObj[prop] = func(val, prop);
+        };
+        this.doForEveryOwnPropValueInObject(obj, cb);
+        return mappedObj;
+    }
 }
 
 

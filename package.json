@@ -1,6 +1,6 @@
 {
   "name": "maltrepreneur.js",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Composition of Helper-Methods concerning processing of Objects and Arrays written in ES6. Without any dependancies.",
   "main": "maltrepreneur.js",
   "scripts": {
