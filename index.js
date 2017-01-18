@@ -1,61 +1,66 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 /*** OBJECT ***/
-/*export class Obj {
-
-    static getOwnPropNamesFromObject = (obj) => {
-        let propNames = [];
-        this.doForEveryOwnPropNameInObject(obj, prop => {
-            propNames.push(prop)
-        });
-        return propNames;
-    };
-
-    static doForEveryOwnPropNameInObject = (obj, cb) => {
-        for (let prop in obj) {
-            if (obj.hasOwnProperty(prop)) {
-                cb(prop);
-            }
-        }
-    };
-
-    static doForEveryOwnPropValueInObject = (obj, cb) => {
-        this.doForEveryOwnPropNameInObject(obj, (prop) => {
-            cb(obj[prop], prop);
-        })
-    };
-
-    static increaseValueIfExistsElseSetToOne = (obj, attr) => {
-        if (typeof obj[attr] === "number")
-            obj[attr]++;
-        else
-            obj[attr] = 1;
-    };
-
-    static map = (obj, func) => {
-        let mappedObj = {};
-        let cb = (val, prop) => {
-            mappedObj[prop] = func(val, prop);
-        };
-        this.doForEveryOwnPropValueInObject(obj, cb);
-        return mappedObj;
-    }
-}*/
-
+var Obj = exports.Obj = function Obj() {
+    _classCallCheck(this, Obj);
+};
 
 /*** ARRAY ***/
 
-/*export class Arr {
+Obj.getOwnPropNamesFromObject = function (obj) {
+    var propNames = [];
+    undefined.doForEveryOwnPropNameInObject(obj, function (prop) {
+        propNames.push(prop);
+    });
+    return propNames;
+};
 
-    static getUniqueValuesByPropertyFromObjectArray = (objArr, prop) => {
-        let values = [];
-        objArr.forEach((obj) => {
-            if (values.indexOf(obj[prop]) < 0)
-                values.push(obj[prop]);
-        });
-        return values;
+Obj.doForEveryOwnPropNameInObject = function (obj, cb) {
+    for (var prop in obj) {
+        if (obj.hasOwnProperty(prop)) {
+            cb(prop);
+        }
+    }
+};
+
+Obj.doForEveryOwnPropValueInObject = function (obj, cb) {
+    undefined.doForEveryOwnPropNameInObject(obj, function (prop) {
+        cb(obj[prop], prop);
+    });
+};
+
+Obj.increaseValueIfExistsElseSetToOne = function (obj, attr) {
+    if (typeof obj[attr] === "number") obj[attr]++;else obj[attr] = 1;
+};
+
+Obj.map = function (obj, func) {
+    var mappedObj = {};
+    var cb = function cb(val, prop) {
+        mappedObj[prop] = func(val, prop);
     };
+    undefined.doForEveryOwnPropValueInObject(obj, cb);
+    return mappedObj;
+};
 
-}*/
+var Arr = exports.Arr = function Arr() {
+    _classCallCheck(this, Arr);
+};
 
-export default {
-    test: "foobar"
+Arr.getUniqueValuesByPropertyFromObjectArray = function (objArr, prop) {
+    var values = [];
+    objArr.forEach(function (obj) {
+        if (values.indexOf(obj[prop]) < 0) values.push(obj[prop]);
+    });
+    return values;
+};
+
+exports.default = {
+    Obj: Obj,
+    Arr: Arr
 };
