@@ -56,7 +56,24 @@ export class Arr {
 
 }
 
-export default {
+const Maltrepreneur = {
     Arr,
     Obj
 };
+
+
+
+(function () {
+    'use strict';
+
+    if (typeof module !== 'undefined' && module.exports) {
+        module.exports = Maltrepreneur;
+    } else if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) {
+        // register as 'classnames', consistent with npm package name
+        define('Maltrepreneur', [], function () {
+            return Maltrepreneur;
+        });
+    } else {
+        window.Maltrepreneur = Maltrepreneur;
+    }
+}());
