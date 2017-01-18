@@ -2,7 +2,7 @@
   "name": "maltrepreneur.js",
   "version": "0.2.7",
   "description": "Composition of Helper-Methods concerning processing of Objects and Arrays written in ES6. Without any dependancies.",
-  "main": "./index",
+  "module": "./index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
