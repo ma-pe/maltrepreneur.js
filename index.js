@@ -1,5 +1,5 @@
 /*** OBJECT ***/
-export class Obj {
+/*export class Obj {
 
     static getOwnPropNamesFromObject = (obj) => {
         let propNames = [];
@@ -38,12 +38,12 @@ export class Obj {
         this.doForEveryOwnPropValueInObject(obj, cb);
         return mappedObj;
     }
-}
+}*/
 
 
 /*** ARRAY ***/
 
-export class Arr {
+/*export class Arr {
 
     static getUniqueValuesByPropertyFromObjectArray = (objArr, prop) => {
         let values = [];
@@ -54,9 +54,8 @@ export class Arr {
         return values;
     };
 
-}
+}*/
 
 export default Maltrepreneur = {
-    Arr,
-    Obj
+    test: "foobar"
 };
