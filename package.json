@@ -1,0 +1,22 @@
+{
+  "name": "maltrepreneur.js",
+  "version": "0.1.0",
+  "description": "Composition of Helper-Methods concerning processing of Objects and Arrays written in ES6. Without any dependancies.",
+  "main": "maltrepreneur.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ma-pe/maltrepreneur.js.git"
+  },
+  "keywords": [
+    "javascript;es6;object;array"
+  ],
+  "author": "Malte Peters",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/ma-pe/maltrepreneur.js/issues"
+  },
+  "homepage": "https://github.com/ma-pe/maltrepreneur.js#readme"
+}
