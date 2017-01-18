@@ -56,6 +56,6 @@
 
 }*/
 
-export default Maltrepreneur = {
+export default {
     test: "foobar"
 };
