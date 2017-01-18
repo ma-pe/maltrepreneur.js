@@ -1,6 +1,7 @@
 /*** OBJECT ***/
 export class Obj {
 
+    // TODO: call ownProps()
     static getOwnPropNamesFromObject = (obj) => {
         let propNames = [];
         this.doForEveryOwnPropNameInObject(obj, prop => {
@@ -9,6 +10,7 @@ export class Obj {
         return propNames;
     };
 
+    // TODO: call forEachPropName()
     static doForEveryOwnPropNameInObject = (obj, cb) => {
         for (let prop in obj) {
             if (obj.hasOwnProperty(prop)) {
@@ -17,12 +19,14 @@ export class Obj {
         }
     };
 
+    // TODO: call it forEach()
     static doForEveryOwnPropValueInObject = (obj, cb) => {
         this.doForEveryOwnPropNameInObject(obj, (prop) => {
             cb(obj[prop], prop);
         })
     };
 
+    // TODO: this is moreover a Math/Counting-Helper?
     static increaseValueIfExistsElseSetToOne = (obj, attr) => {
         if (typeof obj[attr] === "number")
             obj[attr]++;
