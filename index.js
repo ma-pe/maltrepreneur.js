@@ -15,7 +15,7 @@ var Obj = exports.Obj = function Obj() {
 
 Obj.getOwnPropNamesFromObject = function (obj) {
     var propNames = [];
-    undefined.doForEveryOwnPropNameInObject(obj, function (prop) {
+    Obj.doForEveryOwnPropNameInObject(obj, function (prop) {
         propNames.push(prop);
     });
     return propNames;
@@ -30,7 +30,7 @@ Obj.doForEveryOwnPropNameInObject = function (obj, cb) {
 };
 
 Obj.doForEveryOwnPropValueInObject = function (obj, cb) {
-    undefined.doForEveryOwnPropNameInObject(obj, function (prop) {
+    Obj.doForEveryOwnPropNameInObject(obj, function (prop) {
         cb(obj[prop], prop);
     });
 };
@@ -44,7 +44,7 @@ Obj.map = function (obj, func) {
     var cb = function cb(val, prop) {
         mappedObj[prop] = func(val, prop);
     };
-    undefined.doForEveryOwnPropValueInObject(obj, cb);
+    Obj.doForEveryOwnPropValueInObject(obj, cb);
     return mappedObj;
 };
 
