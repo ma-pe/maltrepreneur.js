@@ -70,7 +70,7 @@ const Maltrepreneur = {
         module.exports = Maltrepreneur;
     } else if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) {
         // register as 'classnames', consistent with npm package name
-        define('Maltrepreneur', [], function () {
+        define('maltrepreneur.js', [], function () {
             return Maltrepreneur;
         });
     } else {
