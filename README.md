@@ -1,5 +1,5 @@
 # maltrepreneur.js
-Composition of Helper-Methods concerning processing of Objects and Arrays written in ES6. Without any dependancies.
+Composition of Helper-Methods concerning processing of Objects and Arrays written in ES6. Without any dependencies.
 
 ## Usage
 
